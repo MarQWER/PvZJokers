@@ -1,0 +1,15 @@
+{
+	"id": "PVZJOKERS",
+	"name": "PvZ Jokers",
+	"display_name": "PvZ Jokers",
+	"author": ["Kfer"],
+	"description": "Adds PvZ Plants as Jokers",
+	"prefix": "pvz",
+	"main_file": "main.lua",
+	"badge_colour": "94DB2D",
+	"badge_text_colour": "FFFFFF",
+	"version": "0.1",
+	"dependencies": [
+		"Steamodded (>=1.*)"
+	]
+}
