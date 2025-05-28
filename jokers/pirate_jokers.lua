@@ -4,12 +4,12 @@ SMODS.Joker {
     cost = 5,
     atlas = "Jokers",
     pos = {x=0,y=1},
-    config = { extra = {} },
+    config = { extra = { } },
     unlocked = true,
     discovered = true,
 
     loc_vars = function(self,info_queue,card)
-        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food_kernel_pult", vars = {}}
         info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
     end,
 
@@ -72,7 +72,7 @@ SMODS.Joker {
     discovered = true,
 
     loc_vars = function(self,info_queue,card)
-        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food_spikeweed", vars = {}}
         info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
     end,
 
@@ -141,7 +141,7 @@ SMODS.Joker {
     discovered = true,
 
     loc_vars = function(self,info_queue,card)
-        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food_coconut_cannon", vars = {}}
         info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
     end,
 
@@ -164,7 +164,7 @@ SMODS.Joker {
     discovered = true,
 
     loc_vars = function(self,info_queue,card)
-        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food_threepeater", vars = {}}
         info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
     end,
 
@@ -187,7 +187,7 @@ SMODS.Joker {
     discovered = true,
 
     loc_vars = function(self,info_queue,card)
-        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food_spikerock", vars = {}}
         info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
     end,
 

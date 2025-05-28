@@ -168,7 +168,8 @@ return {
             j_pvz_winter_melon = {
                 name = "Winter Melon",
                 text = { 
-                '',
+                'Adds Mult equal to the amount',
+                'of cards in deck with the {C:pvz_frozencolor}Frozen Seal {X:dark_edition,C:white}^2{}' ,
                 }
             },
             j_pvz_snow_pea = {
@@ -360,7 +361,7 @@ return {
                     '',
                 }
             },
-            plant_food_lightning_rod = {
+            plant_food_lightning_reed = {
                 name = "Plant Food Effect",
                 text = {
                     '',
@@ -381,7 +382,8 @@ return {
             plant_food_winter_melon = {
                 name = "Plant Food Effect",
                 text = {
-                    '',
+                    'Adds 3 random cards with a',
+                    '{C:pvz_frozencolor}Frozen Seal{} to your hand',
                 }
             },
             plant_food_snow_pea = {

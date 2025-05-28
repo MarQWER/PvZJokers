@@ -159,9 +159,8 @@ SMODS.Joker { --- Repeater
     unlocked = true,
     discovered = true,
 
-    -- Remove From Item Pool (Not Ready)
-    in_pool = function(self, args)
-      return not args or not args.source or (args.source ~= 'sho' and args.source ~= 'sta')
+    calculate = function(self,card,context)
+        
     end,
 
     on_plant_food_use = function(self,card)
