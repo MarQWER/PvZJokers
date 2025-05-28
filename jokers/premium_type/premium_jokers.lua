@@ -39,7 +39,7 @@ SMODS.Joker {
     key = 'chomper',
     rarity = 'pvz_premium',
     cost = 4,
-    config = { extra = { chips }},
+    config = { extra = { }},
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = { set = "Other", key = "plant_food_chomper", vars = {}}
         info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
