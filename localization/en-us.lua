@@ -67,7 +67,7 @@ return {
             j_pvz_repeater = {
                 name = "Repeater",
                 text = { 
-                'Not Implemented Yet',
+                '{C#chips}+#1#{} if ',
                 }
             },
             j_pvz_twin_sunflower = {
@@ -85,7 +85,8 @@ return {
             j_pvz_snapdragon = {
                 name = "Snapdragon",
                 text = { 
-                '',
+                'Each played {C:attention}3{}, {C:attention}6{}, or {C:attention}9{}',
+                'gives {C:mult}+#1#{} Mult when scored'
                 }
             },
             j_pvz_spikeweed = {
@@ -308,7 +309,7 @@ return {
             plant_food_snapdragon = {
                 name = "Plant Food Effect",
                 text = {
-                    '',
+                    'Gives {C:mult}+#1#{} Mult more that round',
                 }
             },
             plant_food_spikeweed = {

@@ -8,6 +8,12 @@ SMODS.Joker {
     unlocked = true,
     discovered = true,
 
+    loc_vars = function(self,info_queue,card)
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        return {vars = {card.ability.extra.mult}}
+    end,
+
     on_plant_food_use = function(self,card)
     end,
 
@@ -25,6 +31,12 @@ SMODS.Joker {
     config = { extra = {} },
     unlocked = true,
     discovered = true,
+
+    loc_vars = function(self,info_queue,card)
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        return {vars = {card.ability.extra.mult}}
+    end,
 
     on_plant_food_use = function(self,card)
     end,
@@ -44,6 +56,12 @@ SMODS.Joker {
     unlocked = true,
     discovered = true,
 
+    loc_vars = function(self,info_queue,card)
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        return {vars = {card.ability.extra.mult}}
+    end,
+
     on_plant_food_use = function(self,card)
     end,
 
@@ -62,6 +80,12 @@ SMODS.Joker {
     unlocked = true,
     discovered = true,
 
+    loc_vars = function(self,info_queue,card)
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        return {vars = {card.ability.extra.mult}}
+    end,
+
     on_plant_food_use = function(self,card)
     end,
 
@@ -79,6 +103,12 @@ SMODS.Joker {
     config = { extra = {} },
     unlocked = true,
     discovered = true,
+    
+    loc_vars = function(self,info_queue,card)
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        return {vars = {card.ability.extra.mult}}
+    end,
 
     on_plant_food_use = function(self,card)
     end,
@@ -127,6 +157,7 @@ SMODS.Joker { -- Fortified Tall Nut
     config = { extra = { hand = 2, discard = 2} },
     unlocked = true,
     discovered = true,
+    no_collection = true,
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.hand, card.ability.extra.discard} }
 	end,
@@ -167,6 +198,12 @@ SMODS.Joker {
     config = { extra = {} },
     unlocked = true,
     discovered = true,
+
+    loc_vars = function(self,info_queue,card)
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
+        return {vars = {card.ability.extra.mult}}
+    end,
 
     on_plant_food_use = function(self,card)
     end,
