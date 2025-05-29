@@ -91,12 +91,10 @@ SMODS.Consumable{
         end
     end,
 
-    use = function (self,card,context)
+    use = function (self,card)
         local dollars = G.jokers.highlighted[1].sell_cost
         if dollars > 25 then dollars = 25 end
-        return {
-            G.jokers.highlighted[1]:start_dissolve(),
-            ease_dollars(dollars+G.jokers[highlighted[1].sell_cost])
-        }
+        G.jokers.highlighted[1]:start_dissolve()
+        ease_dollars(dollars+G.jokers.highlighted[1].sell_cost)
     end
 }
