@@ -8,14 +8,16 @@ SMODS.Gradient {
 
 SMODS.Rarity {
     key = 'premium',
-    badge_colour = SMODS.Gradients.pvz_premiumcolor
+    badge_colour = SMODS.Gradients.pvz_premiumcolor,
+    default_weight = 0.5,
+    pools = { ["Joker"] = true },
 }
 
 SMODS.Joker {
     key = 'snow_pea',
     rarity = 'pvz_premium',
     cost = 4,
-    config = { extra = { chips = 200}},
+    config = { extra = { chips = 200, plant_food_used = false}},
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = { set = "Other", key = "plant_food_snow_pea", vars = {}}
         info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
@@ -32,7 +34,31 @@ SMODS.Joker {
                 chips = card.ability.extra.chips 
             }
         end
-    end
+    end,
+
+    on_plant_food_use = function(self,card)
+        local _card = create_playing_card({
+            front = pseudorandom_element(G.P_CARDS, pseudoseed('pvz_melon_pult')),
+            center = G.P_CENTERS.c_base}, G.discard, true, nil, { G.C.SECONDARY_SET.Enhanced }, true)
+            _card:set_seal('pvz_frozen')
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    G.hand:emplace(_card)
+                    _card:start_materialize()
+                    G.hand:sort()
+                    return true
+                end
+            })) 
+        return nil,true
+    end,
+
+    can_use_plantfood = function (self, card, context)
+        local used = card.ability.extra.plant_food_used
+        if  used == false then
+            if G.GAME.blind and G.GAME.blind.in_blind then return true
+            end
+        end
+    end,
 }
 
 SMODS.Joker {

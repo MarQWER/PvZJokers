@@ -150,7 +150,7 @@ SMODS.Joker { -- Tall Nut
 
 SMODS.Joker { -- Fortified Tall Nut
     key = 'fortified_tall_nut',
-    rarity = 2,
+    rarity = 3,
     cost = 5,
     atlas = "UpgradedJokers",
     pos = {x=1,y=0},

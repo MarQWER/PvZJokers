@@ -40,7 +40,7 @@ SMODS.Consumable{ -- Cherry Bomb!
     set = 'PVZConsumableType',
     atlas = 'Consumables',
     pos = {x=0,y=0},
-    can_use = function (self,card, context)
+    can_use = function (self,card)
         if G.GAME.blind and G.GAME.blind.in_blind then return true
         end
     end,
@@ -83,7 +83,7 @@ SMODS.Consumable{
     key = 'Shovel',
     set = 'PVZConsumableType',
     atlas = 'Consumables',
-    pos = {x=1,y=0},
+    pos = {x=2,y=0},
 
     can_use = function (self, card)
         if #G.jokers.highlighted > 0 then

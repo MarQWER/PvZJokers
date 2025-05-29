@@ -389,7 +389,8 @@ return {
             plant_food_snow_pea = {
                 name = "Plant Food Effect",
                 text = {
-                    '',
+                    'Adds a random card with a',
+                    '{C:pvz_frozencolor}Frozen Seal{} to your hand',
                 }
             },
             plant_food_chomper = {
