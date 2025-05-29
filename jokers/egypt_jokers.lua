@@ -2,7 +2,7 @@ SMODS.Joker { --- Bloomerang
     key = 'bloomerang',
     rarity = 2,
     cost = 6,
-    config = { extra = { chips = 300, mult = 15, plant_food_used = false } },
+    config = { extra = { chips = 200, mult = 10, plant_food_used = false } },
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = { set = "Other", key = "plant_food_bloomerang", vars = {card.ability.extra.chips,card.ability.extra.mult}}
         info_queue[#info_queue + 1] = { set = "Other", key = "plant_food", vars = {}}
@@ -158,16 +158,22 @@ SMODS.Joker { --- Repeater
     pos = {x = 8, y = 0},
     unlocked = true,
     discovered = true,
+    config = { extra = { chips = 200, bonus = 200, plant_food_used = false } },
 
     calculate = function(self,card,context)
         
     end,
 
     on_plant_food_use = function(self,card)
+
     end,
 
     can_use_plantfood = function (self, card, context)
-        return false
+        local used = card.ability.extra.plant_food_used
+        if  used == false then
+            if G.GAME.blind and G.GAME.blind.in_blind then return true
+            end  
+        end
     end,
 }
 
