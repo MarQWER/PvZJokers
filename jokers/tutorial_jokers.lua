@@ -188,22 +188,19 @@ SMODS.Joker { --- Potato Mine
     end,
 
     calculate = function(self, card, context)
-        if not context.joker_main then return end
-
-        if (G.GAME.blind and G.GAME.blind.boss) or card.ability.extra.plant_food_used then
-            return {
-                message = localize('spudow'),
-                Xmult_mod = card.ability.extra.Xmult
-            }
-        else
+        if context.joker_main then
+            if G.GAME.blind.boss or card.ability.extra.plant_food_used then
+                return {
+                    message = localize('spudow'),
+                    Xmult_mod = card.ability.extra.Xmult,
+                }
+            end
             return {
                 message = localize('growing')
             }
         end
-    end,
-
-    calculate_after = function(self, card, context)
-        if context.end_of_round then
+        -- Reset Plant food at end of blind
+        if context.end_of_round and context.cardarea == G.jokers then
             card.ability.extra.plant_food_used = false
         end
     end,
